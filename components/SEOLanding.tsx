@@ -207,7 +207,7 @@ export default function SEOLanding({ categoryKey, locale }: SEOLandingProps) {
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": typeof window !== "undefined" ? window.location.href : "https://touching-messages.com"
+      "@id": typeof window !== "undefined" ? window.location.href : "https://touchingtexts.com"
     }
   };
 

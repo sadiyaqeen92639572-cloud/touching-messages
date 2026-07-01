@@ -1,16 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getRequestContext } from "@cloudflare/next-on-pages";
+import { getPrisma } from "@/lib/prisma";
 
-interface Props {
-  params: Promise<{ id: string }>;
-}
+export const runtime = "edge";
 
-export async function DELETE(req: NextRequest, { params }: Props) {
+export async function DELETE(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await params;
-    await prisma.milestone.delete({
-      where: { id }
-    });
+    const { env } = getRequestContext<CloudflareEnv>();
+    const prisma = getPrisma(env.DB);
+    await prisma.milestone.delete({ where: { id } });
     return NextResponse.json({ success: true });
   } catch (error) {
     return NextResponse.json({ error: "Milestone not found or failed to remove" }, { status: 404 });

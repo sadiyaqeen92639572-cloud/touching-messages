@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: categoryData.title,
     description: categoryData.description,
     alternates: {
-      canonical: `https://touching-messages.com/es/love-messages/${category}`,
+      canonical: `https://touchingtexts.com/es/love-messages/${category}`,
       languages: {
-        "en": `https://touching-messages.com/love-messages/${category}`,
-        "es": `https://touching-messages.com/es/love-messages/${category}`,
-        "pt": `https://touching-messages.com/pt/love-messages/${category}`,
-        "x-default": `https://touching-messages.com/love-messages/${category}`,
+        "en": `https://touchingtexts.com/love-messages/${category}`,
+        "es": `https://touchingtexts.com/es/love-messages/${category}`,
+        "pt": `https://touchingtexts.com/pt/love-messages/${category}`,
+        "x-default": `https://touchingtexts.com/love-messages/${category}`,
       }
     },
   };

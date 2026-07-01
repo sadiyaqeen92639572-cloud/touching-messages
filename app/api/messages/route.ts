@@ -1,16 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getRequestContext } from "@cloudflare/next-on-pages";
+import { getPrisma } from "@/lib/prisma";
+
+export const runtime = "edge";
+
+function parseKeywords(raw: string): string[] {
+  try { return JSON.parse(raw); } catch { return []; }
+}
 
 export async function GET(req: NextRequest) {
   try {
-    const messages = await prisma.message.findMany();
+    const { env } = getRequestContext<CloudflareEnv>();
+    const prisma = getPrisma(env.DB);
+    const rows = await prisma.message.findMany();
+    const messages = rows.map(m => ({ ...m, keywords: parseKeywords(m.keywords) }));
+
     const { searchParams } = new URL(req.url);
-    
     if (searchParams.get("motd") === "true") {
       if (messages.length > 0) {
         const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000);
-        const index = dayOfYear % messages.length;
-        return NextResponse.json(messages[index]);
+        return NextResponse.json(messages[dayOfYear % messages.length]);
       }
       return NextResponse.json({ error: "No messages available" }, { status: 404 });
     }
@@ -23,7 +32,10 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
+    const { env } = getRequestContext<CloudflareEnv>();
+    const prisma = getPrisma(env.DB);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const body = await req.json() as any;
     const { action, id, message } = body;
 
     if (action === "like" && id) {
@@ -31,7 +43,7 @@ export async function POST(req: NextRequest) {
         where: { id },
         data: { likes: { increment: 1 } }
       });
-      return NextResponse.json({ success: true, message: updated });
+      return NextResponse.json({ success: true, message: { ...updated, keywords: parseKeywords(updated.keywords) } });
     }
 
     if (action === "add" && message) {
@@ -42,12 +54,12 @@ export async function POST(req: NextRequest) {
           relationshipTag: message.relationshipTag,
           occasionTag: message.occasionTag,
           tone: message.tone,
-          keywords: message.keywords || [],
+          keywords: JSON.stringify(message.keywords || []),
           length: message.length || null,
           slug: message.slug,
         }
       });
-      return NextResponse.json({ success: true, message: added });
+      return NextResponse.json({ success: true, message: { ...added, keywords: parseKeywords(added.keywords) } });
     }
 
     return NextResponse.json({ error: "Invalid action parameters" }, { status: 400 });

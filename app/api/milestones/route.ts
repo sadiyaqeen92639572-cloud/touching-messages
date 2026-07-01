@@ -1,8 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getRequestContext } from "@cloudflare/next-on-pages";
+import { getPrisma } from "@/lib/prisma";
 
-export async function GET(req: NextRequest) {
+export const runtime = "edge";
+
+export async function GET() {
   try {
+    const { env } = getRequestContext<CloudflareEnv>();
+    const prisma = getPrisma(env.DB);
     const milestones = await prisma.milestone.findMany();
     return NextResponse.json(milestones);
   } catch (error) {
@@ -12,7 +17,10 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
+    const { env } = getRequestContext<CloudflareEnv>();
+    const prisma = getPrisma(env.DB);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const body = await req.json() as any;
     const { title, date, description } = body;
 
     if (!title || !date) {
@@ -20,13 +28,8 @@ export async function POST(req: NextRequest) {
     }
 
     const added = await prisma.milestone.create({
-      data: {
-        title,
-        date,
-        description: description || ""
-      }
+      data: { title, date, description: description || "" }
     });
-
     return NextResponse.json({ success: true, milestone: added });
   } catch (error) {
     return NextResponse.json({ error: "Failed to add milestone" }, { status: 500 });

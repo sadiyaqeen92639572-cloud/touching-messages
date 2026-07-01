@@ -1,0 +1,21 @@
+{
+  "runtime": "edge",
+  "name": "api/favorites/[id]",
+  "deploymentTarget": "v8-worker",
+  "entrypoint": "index.js",
+  "assets": [],
+  "framework": {
+    "slug": "nextjs",
+    "version": "15.4.11"
+  },
+  "environment": {
+    "__NEXT_BUILD_ID": "SO0UTxYH8vZCQSIHQv6Mw",
+    "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "UfMj47mFNKLYMkr6a2GviZ9j0E4kM6XfkOJlK3cOih8=",
+    "__NEXT_PREVIEW_MODE_ID": "71541084c168ed3abb0ca0dc59aa4888",
+    "__NEXT_PREVIEW_MODE_SIGNING_KEY": "4663b165861c0a15b05b87bdbed62210e6f8af23d1a58e53d30d71be5fb8e2ef",
+    "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "c61263b357f7a06838212f77e1f6614f9223bad78e8ea7862f471781f878a561"
+  },
+  "filePathMap": {
+    "wasm/wasm_2e94aaed943b9bfe2dc051604e48ff4dd24e4f7b.wasm": ".next/server/edge-chunks/wasm_2e94aaed943b9bfe2dc051604e48ff4dd24e4f7b.wasm"
+  }
+}

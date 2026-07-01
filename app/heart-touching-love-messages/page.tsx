@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description:
     "An extensive, 2000+ word poetic guide featuring the most emotional, heartfelt, and touching love messages ever composed. Melt your partner's heart today.",
   alternates: {
-    canonical: "https://touching-messages.com/heart-touching-love-messages",
+    canonical: "https://touchingtexts.com/heart-touching-love-messages",
     languages: {
-      "en": "https://touching-messages.com/heart-touching-love-messages",
-      "es": "https://touching-messages.com/es/heart-touching-love-messages",
-      "pt": "https://touching-messages.com/pt/heart-touching-love-messages",
-      "x-default": "https://touching-messages.com/heart-touching-love-messages",
+      "en": "https://touchingtexts.com/heart-touching-love-messages",
+      "es": "https://touchingtexts.com/es/heart-touching-love-messages",
+      "pt": "https://touchingtexts.com/pt/heart-touching-love-messages",
+      "x-default": "https://touchingtexts.com/heart-touching-love-messages",
     }
   },
 };

@@ -1,10 +1,10 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
 }
 
 model Message {
@@ -14,7 +14,7 @@ model Message {
   relationshipTag String
   occasionTag     String
   tone            String
-  keywords        String[]
+  keywords        String   @default("[]")
   length          String?
   slug            String   @unique
   likes           Int      @default(0)
@@ -31,7 +31,7 @@ model Favorite {
   background      String
   textColor       String
   savedAt         DateTime @default(now())
-  
+
   title           String
   relationshipTag String
   occasionTag     String
@@ -47,7 +47,7 @@ model Story {
   status      String   @default("Pending Review")
   likes       Int      @default(0)
   createdAt   DateTime @default(now())
-  
+
   storyLikes  StoryLike[]
 }
 

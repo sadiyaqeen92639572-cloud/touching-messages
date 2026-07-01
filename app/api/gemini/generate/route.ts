@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenAI } from "@google/genai";
 
+export const runtime = "edge";
+
 const apiKey = process.env.GEMINI_API_KEY;
 
 // Lazy initialize the SDK client
@@ -32,7 +34,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const body = await req.json();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const body = await req.json() as any;
     const { relationship, tone, occasion, length, context } = body;
 
     const relationshipStr = relationship || "Universal";

@@ -2,8 +2,10 @@ import { MetadataRoute } from 'next';
 import { SEO_CATEGORIES } from '@/data/categories';
 import { I18N_DATA } from '@/data/i18n';
 
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://touching-messages.com';
+  const baseUrl = 'https://touchingtexts.com';
 
   const sitemapEntries: MetadataRoute.Sitemap = [
     {

@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const runtime = "edge";
+
 export async function GET() {
   const serviceWorkerCode = `
 const CACHE_NAME = 'heartfelt-atelier-cache-v1';
