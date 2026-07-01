@@ -1,0 +1,66 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Message {
+  id              String   @id @default(uuid())
+  title           String
+  body            String
+  relationshipTag String
+  occasionTag     String
+  tone            String
+  keywords        String[]
+  length          String?
+  slug            String   @unique
+  likes           Int      @default(0)
+
+  favorites       Favorite[]
+}
+
+model Favorite {
+  id              String   @id @default(uuid())
+  messageId       String
+  message         Message  @relation(fields: [messageId], references: [id])
+  customizedText  String
+  font            String
+  background      String
+  textColor       String
+  savedAt         DateTime @default(now())
+  
+  title           String
+  relationshipTag String
+  occasionTag     String
+}
+
+model Story {
+  id          String   @id @default(uuid())
+  title       String
+  nickname    String
+  theme       String
+  coverImage  String
+  content     String
+  status      String   @default("Pending Review")
+  likes       Int      @default(0)
+  createdAt   DateTime @default(now())
+  
+  storyLikes  StoryLike[]
+}
+
+model StoryLike {
+  id        String   @id @default(uuid())
+  storyId   String
+  story     Story    @relation(fields: [storyId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+model Milestone {
+  id          String   @id @default(uuid())
+  title       String
+  date        String
+  description String?
+}

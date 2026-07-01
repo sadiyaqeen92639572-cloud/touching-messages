@@ -1,0 +1,6 @@
+{
+  "name": "Touching Messages",
+  "description": "SEO-First Romantic Messages Platform with an AI Writing Assistant and Community Story Sanctuary",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

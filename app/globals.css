@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-bg: #FAF7F2;
+  --color-crimson: #8C3B3B;
+  --color-warm-gold: #D4A373;
+  --color-dark-text: #2D2D2D;
+  --color-warm-border: #E5E1DA;
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-script: var(--font-script);
+}
+
+/* Custom background animations/backdrops for customized messages */
+.bg-cream-solid {
+  background-color: #FAF7F2;
+}
+.bg-soft-blush-pink {
+  background-color: #FFF0F5;
+  background-image: radial-gradient(at 100% 0%, #FFF5F7 0px, transparent 50%), radial-gradient(at 0% 100%, #FFE4E1 0px, transparent 50%);
+}
+.bg-delicate-lavender {
+  background-color: #F8F4FF;
+  background-image: radial-gradient(at 100% 100%, #E6E6FA 0px, transparent 50%), radial-gradient(at 0% 0%, #F3E5F5 0px, transparent 50%);
+}
+.bg-rose-petals {
+  background-color: #FAF5F5;
+  background-image: radial-gradient(#FBCFE8 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.bg-fairy-lights {
+  background-color: #2D221E;
+  background-image: radial-gradient(#FDE047 1px, transparent 1px), radial-gradient(#FEF08A 2px, transparent 2px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+.bg-starry-night {
+  background-color: #111827;
+  background-image: radial-gradient(#ffffff 0.5px, transparent 0.5px), radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E1DA;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4A373;
+}
