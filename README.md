@@ -1,12 +1,21 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Touching Texts — Heart Touching Love Messages
 
-# Run and deploy your AI Studio app
+**Live site:** [touchingtexts.com](https://touchingtexts.com/)
 
-This contains everything you need to run your app locally.
+A Next.js App Router site with 93 curated, human-written love messages across 14 occasion categories. Built on Cloudflare Pages + D1 (SQLite).
 
-View your app in AI Studio: https://ai.studio/apps/6f4350e7-9aad-4a03-9657-ca225f1ea8d1
+## Stack
+
+- **Next.js 15** App Router + TypeScript + Tailwind
+- **Cloudflare Pages** — edge runtime (`@cloudflare/next-on-pages`)
+- **Cloudflare D1** — SQLite database via Prisma + `@prisma/adapter-d1`
+- **Gemini API** — AI message writer feature
+
+## Message Categories
+
+Anniversary · Apology · Birthday · Congratulations · Get Well Soon · Good Morning · Good Night · I Miss You · Instagram Captions · Just Because · Long Distance · Reconciliation · Thinking of You · Valentine's Day
+
+Each category has For Her / For Him / Universal variants.
 
 ## Free Companion Tools
 
@@ -14,11 +23,28 @@ View your app in AI Studio: https://ai.studio/apps/6f4350e7-9aad-4a03-9657-ca225
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js, Wrangler CLI
 
+```bash
+npm install
+npx wrangler d1 execute touching-messages-db --local --file=prisma/schema.sql
+npm run dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Deploy
+
+```bash
+npm run build
+npx wrangler pages deploy .vercel/output/static --project-name touching-messages
+```
+
+## D1 Database
+
+```bash
+# Seed messages
+node seed-d1.js --remote
+node seed-d1-batch2.js --remote
+
+# Query
+npx wrangler d1 execute touching-messages-db --remote --command "SELECT COUNT(*) FROM Message;"
+```
