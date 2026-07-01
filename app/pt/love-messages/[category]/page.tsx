@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!categoryData) {
     return {
-      title: "Categoria Não Encontrada — Heartfelt Atelier",
+      title: "Categoria Não Encontrada — Touching Texts",
     };
   }
 

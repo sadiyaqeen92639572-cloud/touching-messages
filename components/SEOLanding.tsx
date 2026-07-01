@@ -195,11 +195,11 @@ export default function SEOLanding({ categoryKey, locale }: SEOLandingProps) {
     "description": categoryData?.description || "An elegant anthology of romantic messages and custom letters.",
     "author": {
       "@type": "Organization",
-      "name": "Heartfelt Atelier"
+      "name": "Touching Texts"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Heartfelt Atelier",
+      "name": "Touching Texts",
       "logo": {
         "@type": "ImageObject",
         "url": "https://picsum.photos/seed/romantic/200/200"
@@ -242,7 +242,7 @@ export default function SEOLanding({ categoryKey, locale }: SEOLandingProps) {
           <Link href="/" className="flex items-center gap-2 group">
             <Heart className="w-6 h-6 text-[#8C3B3B] fill-[#8C3B3B] group-hover:scale-110 transition-transform" />
             <span className="font-serif font-bold text-lg tracking-tight text-[#8C3B3B]">
-              Heartfelt Atelier
+              Touching Texts
             </span>
           </Link>
           
@@ -602,7 +602,7 @@ export default function SEOLanding({ categoryKey, locale }: SEOLandingProps) {
       <footer className="bg-white border-t border-[#E5E1DA] mt-24 py-12 text-center">
         <div className="max-w-6xl mx-auto px-4 space-y-4">
           <p className="font-serif font-semibold text-[#8C3B3B]">
-            Heartfelt Atelier — Touch Hearts with Elegance
+            Touching Texts — Touch Hearts with Elegance
           </p>
           <p className="text-xs text-gray-500">
             © {new Date().getFullYear()} Touching Messages Romantic Platform. Crafted with absolute devotion for modern lovers.

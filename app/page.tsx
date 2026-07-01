@@ -14,7 +14,7 @@ export default function HomePage() {
         <div className="flex items-center gap-2 group">
           <Heart className="w-6 h-6 text-[#8C3B3B] fill-[#8C3B3B]" />
           <span className="font-serif font-bold text-lg tracking-tight text-[#8C3B3B]">
-            Heartfelt Atelier
+            Touching Texts
           </span>
         </div>
         <div className="flex gap-4 text-xs font-mono font-bold uppercase tracking-wider text-[#D4A373] hover:text-[#8C3B3B] transition-colors">
@@ -124,7 +124,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="bg-white border-t border-[#E5E1DA] py-8 text-center shrink-0 z-10">
         <p className="text-[10px] font-mono text-gray-400">
-          © {new Date().getFullYear()} Heartfelt Atelier. Replaces localStorage with SQLite-style server-side file persistence. Fully typed in TypeScript.
+          © {new Date().getFullYear()} Touching Texts. Replaces localStorage with SQLite-style server-side file persistence. Fully typed in TypeScript.
         </p>
       </footer>
 

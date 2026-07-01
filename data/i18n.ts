@@ -83,7 +83,7 @@ export const I18N_DATA: Record<string, {
     },
     messages: {},
     ui: {
-      "nav_title": "Heartfelt Atelier",
+      "nav_title": "Touching Texts",
       "pwa_install": "Install App",
       "pwa_installed": "App Installed",
       "pwa_prompt": "Add to Home Screen",

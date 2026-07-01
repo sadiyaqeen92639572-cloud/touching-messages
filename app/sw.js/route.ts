@@ -4,7 +4,7 @@ export const runtime = "edge";
 
 export async function GET() {
   const serviceWorkerCode = `
-const CACHE_NAME = 'heartfelt-atelier-cache-v1';
+const CACHE_NAME = 'touching-texts-cache-v1';
 const ASSETS_TO_CACHE = [
   '/',
   '/manifest.json',

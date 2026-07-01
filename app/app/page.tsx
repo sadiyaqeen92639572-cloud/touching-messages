@@ -298,7 +298,7 @@ function AppContainer() {
       if (permission === "granted") {
         setPushEnabled(true);
         showToast("Daily notifications successfully enabled! 🔔");
-        new Notification("Heartfelt Atelier", {
+        new Notification("Touching Texts", {
           body: "Welcome to your daily dose of love and devotion. Your first message of the day will arrive tomorrow!",
           icon: "/favicon.ico"
         });
@@ -514,7 +514,7 @@ function AppContainer() {
 
     ctx.font = `18px ${fontName}`;
     ctx.globalAlpha = 0.6;
-    ctx.fillText("✨ Created at Heartfelt Atelier", width / 2, height - 110);
+    ctx.fillText("✨ Created at Touching Texts", width / 2, height - 110);
     ctx.globalAlpha = 1.0;
 
     try {
@@ -528,7 +528,7 @@ function AppContainer() {
               await navigator.share({
                 files: [file],
                 title: editorTitle,
-                text: "Crafted with love at Heartfelt Atelier"
+                text: "Crafted with love at Touching Texts"
               });
               showToast("Shared successfully! 🌸");
               return;
@@ -765,7 +765,7 @@ function AppContainer() {
   const [copiedNoteId, setCopiedNoteId] = useState<string | null>(null);
 
   const handleSmartCopy = (text: string) => {
-    const watermark = "\n\n✨ Customized with Heartfelt Atelier";
+    const watermark = "\n\n✨ Customized with Touching Texts";
     navigator.clipboard.writeText(text + watermark);
     incrementShareCount();
     showToast("📋 Customized message copied!");
@@ -825,7 +825,7 @@ function AppContainer() {
         </nav>
         
         <h1 className="text-4xl lg:text-5xl font-serif leading-[1.1] text-[#2D2D2D] mb-5">
-          Heartfelt Atelier <br />
+          Touching Texts <br />
           <span className="text-[#8C3B3B] italic">Interactive Love Studio</span>
         </h1>
         

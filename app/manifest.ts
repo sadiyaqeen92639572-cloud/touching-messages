@@ -4,8 +4,8 @@ export const dynamic = 'force-static'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Heartfelt Atelier',
-    short_name: 'Heartfelt Atelier',
+    name: 'Touching Texts',
+    short_name: 'Touching Texts',
     description: 'Find the perfect words for any occasion.',
     start_url: '/',
     display: 'standalone',
