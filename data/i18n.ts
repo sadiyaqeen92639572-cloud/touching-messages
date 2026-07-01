@@ -277,6 +277,46 @@ export const I18N_DATA: Record<string, {
         introduction: "Finalmente tomaste la foto perfecta en pareja: la iluminación es impecable y sus sonrisas son genuinas. Ahora solo necesitas el caption perfecto de amor para Instagram. Encontrar una frase romántica pero no demasiado cursi es todo un arte.",
         relatedKeywords: ["frases de amor para instagram", "captions para novios", "descripciones para fotos con mi novio"],
         faqs: [{ question: "¿Cómo exporto estas frases para Instagram?", answer: "Toca cualquier frase para cargarla en el Applet. Elige el formato Story (9:16) o Square (1:1), personaliza y exporta." }]
+      },
+      "apology": {
+        title: "Mensajes de Disculpa para Él o Ella — Sanar tras una Pelea",
+        description: "Sana la herida con conmovedores mensajes de disculpa para tu pareja. Palabras sinceras y vulnerables para pedir perdón y restaurar el amor.",
+        h1: "Mensajes de Disculpa para Restaurar el Amor tras una Pelea",
+        introduction: "Los desacuerdos son parte de cualquier amor profundo, pero el silencio que queda después puede pesar mucho. Encontrar la humildad y las palabras adecuadas para disculparse es el primer paso para restaurar la armonía. Esta colección ofrece disculpas sinceras y emocionalmente honestas para pedir perdón y reconstruir la confianza.",
+        relatedKeywords: ["mensajes de disculpa para mi pareja", "cómo pedir perdón en un mensaje", "textos de disculpa después de pelear"],
+        faqs: [{ question: "¿Qué debe incluir un mensaje de disculpa?", answer: "Reconocimiento del daño causado, expresión clara de arrepentimiento sin excusas, y una reafirmación de tu amor y compromiso." }]
+      },
+      "birthday": {
+        title: "Mensajes de Cumpleaños que Tocan el Corazón para Novio y Novia",
+        description: "Celebra su día especial con conmovedores mensajes de cumpleaños de amor. Poéticos y memorables, para que se sienta verdaderamente adorado.",
+        h1: "Mensajes de Cumpleaños que Tocan el Corazón para Tu Amor",
+        introduction: "Un cumpleaños es mucho más que una marca en el calendario; es la celebración del día en que el universo te presentó a tu persona favorita. Estos mensajes van más allá de los pasteles y globos, capturando los momentos íntimos y el futuro que están construyendo juntos.",
+        relatedKeywords: ["mensajes de cumpleaños románticos para novio", "feliz cumpleaños amor mío", "párrafos de cumpleaños para enamorar"],
+        faqs: [{ question: "¿Cómo escribir un mensaje de cumpleaños profundo?", answer: "Enfócate en cómo su presencia ha cambiado tu vida, menciona cualidades específicas que admiras y describe el hermoso futuro que deseas compartir." }]
+      },
+      "for-boyfriend": {
+        title: "Mensajes de Amor Largos para mi Novio — Devoción Absoluta",
+        description: "Descubre mensajes de amor largos y conmovedores para tu novio. Expresa tu lealtad, pasión romántica y cercanía emocional con elegancia.",
+        h1: "Mensajes de Amor Largos para tu Novio que Tocan el Corazón",
+        introduction: "Un novio es compañero, cómplice de aventuras y apoyo constante. A veces olvidamos recordarle el increíble impacto que tiene en nuestra vida. Escribirle párrafos largos y emotivos es el combustible perfecto para su confianza y cariño. Esta colección resalta su encanto, su lealtad y su papel como tu compañero definitivo.",
+        relatedKeywords: ["mensajes de amor para mi novio largos", "párrafos románticos para él", "textos de amor profundos para novio"],
+        faqs: [{ question: "¿Cómo hacer sentir valorado a mi novio por mensaje?", answer: "Reconoce sus gestos protectores, agradécele su apoyo emocional y recuérdale lo especial e importante que es para ti." }]
+      },
+      "make-her-cry": {
+        title: "Mensajes para Hacer Llorar a tu Novia de Amor — Emoción Profunda",
+        description: "Explora mensajes de amor para hacer llorar a tu novia de alegría. Párrafos profundamente emotivos que capturan una adoración absoluta.",
+        h1: "Mensajes para Hacer Llorar a tu Novia de Amor y Felicidad",
+        introduction: "Las lágrimas no siempre son de tristeza; pueden ser el desbordamiento de una copa emocional completamente llena. Cuando una mujer es amada con devoción feroz y tierna, escuchar esos sentimientos expresados en palabras puede provocar lágrimas de gratitud absoluta. Esta colección captura el cénit de la adoración romántica.",
+        relatedKeywords: ["mensajes para hacer llorar a mi novia de amor", "textos para hacer llorar de felicidad", "párrafos que hacen llorar de amor"],
+        faqs: [{ question: "¿Por qué los mensajes emotivos hacen llorar?", answer: "Porque hacen que la persona se sienta vista, segura y profundamente amada. Es una liberación biológica de alegría y consuelo." }]
+      },
+      "make-him-cry": {
+        title: "Mensajes para Hacer Llorar a tu Novio de Amor — Sinceros y Profundos",
+        description: "Descubre mensajes para hacer llorar a tu novio. Párrafos altamente emotivos y vulnerables diseñados para tocar su alma profundamente.",
+        h1: "Mensajes para Hacer Llorar a tu Novio de Emoción y Gratitud",
+        introduction: "Hay una intimidad sagrada en ver al hombre que amas mostrar vulnerabilidad emocional. Cuando le hablas con verdad sin adornos y devoción romántica profunda, derrites la armadura protectora que lleva al mundo. Esta colección toca su alma en su punto más hondo, validando su carácter, su ternura y el espacio increíble que ocupa en tu vida.",
+        relatedKeywords: ["mensajes para hacer llorar a mi novio de amor", "textos emotivos para él", "párrafos para hacer llorar a un hombre"],
+        faqs: [{ question: "¿Pueden las palabras románticas emocionar a un hombre?", answer: "Sí, cuando un hombre se siente verdaderamente comprendido, respetado y amado por quien es, puede ser una experiencia profundamente emotiva." }]
       }
     },
     messages: {
@@ -528,6 +568,46 @@ export const I18N_DATA: Record<string, {
         introduction: "Você finalmente tirou a foto perfeita de casal: a iluminação está impecável e os sorrisos são genuínos. Agora você só precisa da legenda de amor perfeita para o Instagram. Encontrar uma frase romântica, mas não muito clichê, é uma arte.",
         relatedKeywords: ["frases de amor para instagram", "legendas para namorados", "descrições para fotos com namorado"],
         faqs: [{ question: "Como exporto essas frases para o Instagram?", answer: "Toque em qualquer frase para carregá-la no Applet. Escolha o formato Story (9:16) ou Square (1:1), personalize e exporte." }]
+      },
+      "apology": {
+        title: "Mensagens de Desculpa para Ele ou Ela — Curar após uma Briga",
+        description: "Cure a ferida com mensagens emocionantes de desculpa para seu parceiro. Palavras sinceras e vulneráveis para pedir perdão e restaurar o amor.",
+        h1: "Mensagens de Desculpa para Restaurar o Amor após uma Briga",
+        introduction: "As discussões fazem parte de qualquer amor profundo, mas o silêncio que fica depois pode pesar muito. Encontrar a humildade e as palavras certas para se desculpar é o primeiro passo para restaurar a harmonia. Esta coleção oferece pedidos de desculpa sinceros e emocionalmente honestos para reconstruir a confiança.",
+        relatedKeywords: ["mensagens de desculpa para namorado", "como pedir perdão por mensagem", "textos de desculpa depois de briga"],
+        faqs: [{ question: "O que deve incluir uma mensagem de desculpa?", answer: "Reconhecimento do dano causado, expressão clara de arrependimento sem desculpas, e uma reafirmação do seu amor e compromisso." }]
+      },
+      "birthday": {
+        title: "Mensagens de Aniversário que Tocam o Coração para Namorado e Namorada",
+        description: "Celebre o dia especial dele(a) com mensagens de aniversário de amor. Poéticas e memoráveis, para que se sinta verdadeiramente adorado(a).",
+        h1: "Mensagens de Aniversário que Tocam o Coração para o seu Amor",
+        introduction: "Um aniversário é muito mais do que uma data no calendário; é a celebração do dia em que o universo apresentou a você a sua pessoa favorita. Estas mensagens vão além dos bolos e balões, capturando os momentos íntimos e o futuro que vocês estão construindo juntos.",
+        relatedKeywords: ["mensagens de aniversário românticas para namorado", "feliz aniversário meu amor", "parágrafos de aniversário para apaixonar"],
+        faqs: [{ question: "Como escrever uma mensagem de aniversário profunda?", answer: "Foque em como a presença dele(a) mudou a sua vida, mencione qualidades específicas que você admira e descreva o lindo futuro que deseja compartilhar." }]
+      },
+      "for-boyfriend": {
+        title: "Mensagens de Amor Longas para meu Namorado — Devoção Absoluta",
+        description: "Descubra mensagens de amor longas e tocantes para o seu namorado. Expresse sua lealdade, paixão romântica e proximidade emocional com elegância.",
+        h1: "Mensagens de Amor Longas para o seu Namorado que Tocam o Coração",
+        introduction: "Um namorado é companheiro, cúmplice de aventuras e apoio constante. Às vezes esquecemos de lembrá-lo do incrível impacto que tem na nossa vida. Escrever parágrafos longos e emotivos é o combustível perfeito para a sua confiança e carinho. Esta coleção destaca o seu charme, sua lealdade e o seu papel como companheiro definitivo.",
+        relatedKeywords: ["mensagens de amor para namorado longas", "parágrafos românticos para ele", "textos de amor profundos para namorado"],
+        faqs: [{ question: "Como fazer o namorado se sentir valorizado por mensagem?", answer: "Reconheça seus gestos protetores, agradeça pelo apoio emocional e lembre-o do quão especial e importante ele é para você." }]
+      },
+      "make-her-cry": {
+        title: "Mensagens para Fazer Chorar sua Namorada de Amor — Emoção Profunda",
+        description: "Explore mensagens de amor para fazer chorar sua namorada de alegria. Parágrafos profundamente emotivos que capturam uma adoração absoluta.",
+        h1: "Mensagens para Fazer Chorar sua Namorada de Amor e Felicidade",
+        introduction: "As lágrimas nem sempre são de tristeza; podem ser o transbordamento físico de uma taça emocional completamente cheia. Quando uma mulher é amada com devoção feroz e terna, ouvir esses sentimentos expressos em palavras pode provocar lágrimas de gratidão absoluta. Esta coleção captura o zênite da adoração romântica.",
+        relatedKeywords: ["mensagens para fazer chorar minha namorada de amor", "textos para fazer chorar de felicidade", "parágrafos que fazem chorar de amor"],
+        faqs: [{ question: "Por que mensagens emotivas fazem as pessoas chorarem?", answer: "Porque fazem a pessoa se sentir vista, segura e profundamente amada. É uma liberação biológica de alegria e conforto." }]
+      },
+      "make-him-cry": {
+        title: "Mensagens para Fazer Chorar seu Namorado de Amor — Sinceras e Profundas",
+        description: "Descubra mensagens para fazer chorar o seu namorado. Parágrafos altamente emotivos e vulneráveis criados para tocar a sua alma profundamente.",
+        h1: "Mensagens para Fazer Chorar seu Namorado de Emoção e Gratidão",
+        introduction: "Há uma intimidade sagrada em ver o homem que você ama mostrar vulnerabilidade emocional. Quando você lhe fala com verdade sem adornos e devoção romântica profunda, derrete a armadura protetora que ele carrega para o mundo. Esta coleção toca a sua alma em seu ponto mais profundo, validando seu caráter, ternura e o espaço incrível que ocupa na sua vida.",
+        relatedKeywords: ["mensagens para fazer chorar meu namorado de amor", "textos emotivos para ele", "parágrafos para fazer um homem chorar"],
+        faqs: [{ question: "Palavras românticas podem emocionar um homem?", answer: "Sim, quando um homem se sente verdadeiramente compreendido, respeitado e amado por quem é, pode ser uma experiência profundamente emotiva." }]
       }
     },
     messages: {
