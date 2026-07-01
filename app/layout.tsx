@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     "long distance love paragraphs",
   ],
   manifest: "/manifest.webmanifest",
+  verification: {
+    google: "Uh8RuMtnQuSHNN-jrQogPRkoNcV6UUgeJYz6iY9Ihy8",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
