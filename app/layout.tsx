@@ -29,6 +29,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://touchingtexts.com"),
   title: "Touching Messages — Heartfelt Love Messages Platform",
   description:
     "An elegant collection of heartfelt romantic love messages, apologies, long distance notes, and emotional paragraphs. Create customized love notes with our AI Writer.",
@@ -41,6 +42,25 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   verification: {
     google: "Uh8RuMtnQuSHNN-jrQogPRkoNcV6UUgeJYz6iY9Ihy8",
+  },
+  alternates: { canonical: "/" },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+  },
+  openGraph: {
+    title: "Touching Messages — Heartfelt Love Messages Platform",
+    description:
+      "An elegant collection of heartfelt romantic love messages, apologies, long distance notes, and emotional paragraphs.",
+    type: "website",
+    url: "https://touchingtexts.com",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
   },
 };
 
