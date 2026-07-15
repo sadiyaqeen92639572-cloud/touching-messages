@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Footer from "./Footer";
 import { useRouter } from "next/navigation";
 import { RomanticMessage } from "@/types";
 import { SEO_CATEGORIES, SEOCategory } from "@/data/categories";
@@ -195,11 +196,17 @@ export default function SEOLanding({ categoryKey, locale }: SEOLandingProps) {
     "description": categoryData?.description || "An elegant anthology of romantic messages and custom letters.",
     "author": {
       "@type": "Organization",
-      "name": "Touching Texts"
+      "name": "Touching Texts",
+      "legalName": "Gesmine-Invest Limited",
+      "identifier": { "@type": "PropertyValue", "propertyID": "UK Company Number", "value": "14120136" },
+      "address": { "@type": "PostalAddress", "streetAddress": "Hardy House, 269 Poynders Gardens", "addressLocality": "London", "postalCode": "SW4 8PQ", "addressCountry": "GB" }
     },
     "publisher": {
       "@type": "Organization",
       "name": "Touching Texts",
+      "legalName": "Gesmine-Invest Limited",
+      "identifier": { "@type": "PropertyValue", "propertyID": "UK Company Number", "value": "14120136" },
+      "address": { "@type": "PostalAddress", "streetAddress": "Hardy House, 269 Poynders Gardens", "addressLocality": "London", "postalCode": "SW4 8PQ", "addressCountry": "GB" },
       "logo": {
         "@type": "ImageObject",
         "url": "https://picsum.photos/seed/romantic/200/200"
@@ -598,17 +605,7 @@ export default function SEOLanding({ categoryKey, locale }: SEOLandingProps) {
         </div>
       </main>
 
-      {/* Elegant Footer */}
-      <footer className="bg-white border-t border-[#E5E1DA] mt-24 py-12 text-center">
-        <div className="max-w-6xl mx-auto px-4 space-y-4">
-          <p className="font-serif font-semibold text-[#8C3B3B]">
-            Touching Texts — Touch Hearts with Elegance
-          </p>
-          <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} Touching Messages Romantic Platform. Crafted with absolute devotion for modern lovers.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

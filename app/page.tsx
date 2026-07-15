@@ -126,6 +126,9 @@ export default function HomePage() {
         <p className="text-[10px] font-mono text-gray-400">
           © {new Date().getFullYear()} Touching Texts. Replaces localStorage with SQLite-style server-side file persistence. Fully typed in TypeScript.
         </p>
+        <p className="text-[10px] font-mono text-gray-400 mt-1">
+          Touching Texts is part of Gesmine-Invest Limited, registered UK company number 14120136, registered office address at Hardy House, 269 Poynders Gardens, London, London, United Kingdom, SW4 8PQ.
+        </p>
       </footer>
 
     </div>
