@@ -377,22 +377,38 @@ export const SEO_CATEGORIES: Record<string, SEOCategory> = {
   },
   "for-wife": {
     slug: "for-wife",
-    title: "Heart Touching Love Messages for Wife — Romantic Paragraphs",
-    description: "Melt her heart with touching love messages for your wife. Romantic paragraphs to remind your wife she is the queen of your heart and life.",
-    h1: "Heart Touching Love Messages to Adore Your Wife",
+    title: "Heart Touching Love Messages for Wife — Romantic Text & Quotes",
+    description: "Heart touching love messages for wife: romantic texts, short love notes, and heartfelt quotes to remind your wife she is the queen of your heart and life.",
+    h1: "Heart Touching Love Messages and Romantic Texts for Your Wife",
     introduction: `Your wife is the cornerstone of your life, your most trusted confidante, and the woman who holds your family together. While your wedding day may have been the start of your forever, love is a choice you make every single day. Sending heart touching love messages for your wife is one of the most effective ways to make her feel seen, beautiful, and deeply valued.
 
-    These romantic texts for your wife are designed to celebrate her enduring grace, her patience, and the unconditional love she provides. Whether you slip a handwritten note into her purse or send a surprise text during her lunch break, these paragraphs will remind her that she is just as captivating to you today as the moment you first met.`,
+    These romantic texts for your wife are designed to celebrate her enduring grace, her patience, and the unconditional love she provides. Whether you slip a handwritten note into her purse, send a short love message during her lunch break, or leave a longer romantic text before bed, these paragraphs will remind her that she is just as captivating to you today as the moment you first met.`,
     relatedKeywords: [
       "love messages for wife",
       "romantic texts for wife",
       "sweet love message for my wife",
-      "deep paragraphs for wife"
+      "deep paragraphs for wife",
+      "short love message for wife",
+      "love notes to wife",
+      "heartfelt message to wife",
+      "romantic text messages for wife"
     ],
     faqs: [
       {
         question: "How can I romance my wife with words?",
         answer: "Acknowledge the invisible work she does, compliment her beauty (both inside and out), and tell her that choosing her was the best decision of your life."
+      },
+      {
+        question: "What is a short love message I can text my wife?",
+        answer: "Keep it specific and present-tense: 'I fell in love with you again this morning watching you make coffee. Still the best decision of my life.' Short texts land best when they reference something real, not generic."
+      },
+      {
+        question: "What's a romantic text to send my wife during the day?",
+        answer: "Something unexpected mid-day works best: 'Thinking about you right now and how lucky I am to call you mine. Can't wait to see you tonight.' A surprise romantic text outside of morning/night routines feels more genuine."
+      },
+      {
+        question: "How do I write a heartfelt love note to my wife?",
+        answer: "Focus on one specific memory or quality rather than general praise — 'Watching you with our kids reminds me why I married you' means more than 'you're amazing.' Specificity is what makes a note feel heartfelt instead of generic."
       }
     ],
     relationshipTag: "For Her",
