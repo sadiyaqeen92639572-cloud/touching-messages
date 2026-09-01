@@ -1,0 +1,38 @@
+# Touching Texts (touchingtexts.com)
+
+> A curated library of heart-touching love messages, apology notes, long-distance texts and emotional paragraphs, plus a free AI Love Note Writer. Browse hundreds of hand-written messages by relationship, occasion and tone, or generate a custom one. English, Spanish and Portuguese. No login required to read or generate; an optional local account saves favorites, milestones and submitted stories.
+
+## What the site is
+
+Two things:
+1. **A static message library** — hand-written messages grouped into 18 SEO categories, each with an intro, a long message list, related keywords and an FAQ block. Served in 3 languages (en / es / pt), same 18 categories each.
+2. **The AI Love Note Writer** (`/app`) — a client app that calls a Gemini-backed endpoint to draft an original romantic message from four inputs: relationship, tone, occasion, length. Also has favorites, relationship-milestone reminders, and a "share your story" submission flow, all backed by a Cloudflare D1 database.
+
+## Categories (18, identical set per language)
+
+for-her, for-him, long-distance, apology, birthday, for-boyfriend, make-her-cry, make-him-cry, reconciliation-after-a-fight, for-girlfriend, valentines-day, i-miss-you, anniversary, for-husband, for-wife, i-love-you, good-night, instagram-captions
+
+## Pages
+
+- [Home](https://touchingtexts.com/) — category and feature overview
+- [/app](https://touchingtexts.com/app) — AI Love Note Writer + favorites + milestones + story submission
+- [/heart-touching-love-messages](https://touchingtexts.com/heart-touching-love-messages) — pillar page (also `/es/…`, `/pt/…`)
+- [/love-messages/{category}](https://touchingtexts.com/love-messages/for-her) — one page per category (English)
+- [/es/love-messages/{category}](https://touchingtexts.com/es/love-messages/for-her) — Spanish category pages
+- [/pt/love-messages/{category}](https://touchingtexts.com/pt/love-messages/for-her) — Portuguese category pages
+- `/sitemap.xml`, `/robots.txt`, PWA manifest + service worker (installable offline)
+
+## AI Love Note Writer — how it works
+
+- Endpoint: `POST /api/gemini/generate`, Edge runtime, model **gemini-3.5-flash**, temperature 0.85.
+- Inputs: `relationship` (default "Universal"), `tone` (default "Romantic"), `occasion` (default "Just Because"), `length` (`Short SMS` <140 chars / `Paragraph` 3–5 sentences / letter with 2–3 paragraphs), optional free-text `context`.
+- System prompt forces original metaphors and explicitly bans AI clichés ("tapestry of life", "beacon of light", "delicate dance", "testament of our love"). Output is the message text only — no preamble, no markdown.
+- Other API routes (`/api/favorites`, `/api/messages`, `/api/milestones`, `/api/stories`) read/write a Cloudflare D1 database for the optional saved-content features.
+
+## Notes for LLMs
+
+- The library messages are hand-curated editorial content, not generated per request — safe to quote and attribute to the category page.
+- The `/app` output is model-generated on demand and not stored as canonical site content; it varies per call.
+- Three languages share the same 18 category slugs; only the path prefix (`/es`, `/pt`) and the copy differ.
+- No personal data is required; account features (favorites, milestones, stories) are opt-in and stored server-side in D1 keyed to a local identifier.
+- It's a writing-inspiration tool, not relationship or mental-health advice.
